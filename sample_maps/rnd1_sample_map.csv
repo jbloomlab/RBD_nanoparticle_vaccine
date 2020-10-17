@@ -1,0 +1,30 @@
+﻿DateSetUp,Sample,Plate,SampleNum,Virus,PlateLayout,StartDil,DilFactor
+201013,0793-1,Plate1,1,S-d21-D614G,layout1.csv,0.05,3
+201013,0846-1,Plate1,2,S-d21-D614G,layout1.csv,0.05,3
+201013,0807-1,Plate1,3,S-d21-D614G,layout1.csv,0.05,3
+201013,0813-1,Plate1,4,S-d21-D614G,layout1.csv,0.05,3
+201013,0863-1,Plate2,1,S-d21-D614G,layout1.csv,0.05,3
+201013,0867-1,Plate2,2,S-d21-D614G,layout1.csv,0.05,3
+201013,0872-1,Plate2,3,S-d21-D614G,layout1.csv,0.05,3
+201013,0876-1,Plate2,4,S-d21-D614G,layout1.csv,0.05,3
+201013,0794-1,Plate3,1,S-d21-D614G,layout1.csv,0.05,3
+201013,0848-1,Plate3,2,S-d21-D614G,layout1.csv,0.05,3
+201013,0810-1,Plate3,3,S-d21-D614G,layout1.csv,0.05,3
+201013,0812-1,Plate3,4,S-d21-D614G,layout1.csv,0.05,3
+201013,0861-1,Plate4,1,S-d21-D614G,layout1.csv,0.05,3
+201013,0835-1,Plate4,2,S-d21-D614G,layout1.csv,0.05,3
+201013,0829-1,Plate4,3,S-d21-D614G,layout1.csv,0.05,3
+201013,0879-1,Plate4,4,S-d21-D614G,layout1.csv,0.05,3
+201013,0839-1,Plate5,1,S-d21-D614G,layout1.csv,0.05,3
+201013,0801-1,Plate5,2,S-d21-D614G,layout1.csv,0.05,3
+201013,0808-1,Plate5,3,S-d21-D614G,layout1.csv,0.05,3
+201013,0815-1,Plate5,4,S-d21-D614G,layout1.csv,0.05,3
+201013,0864-1,Plate6,1,S-d21-D614G,layout1.csv,0.05,3
+201013,0831-1,Plate6,2,S-d21-D614G,layout1.csv,0.05,3
+201013,0828-1,Plate6,3,S-d21-D614G,layout1.csv,0.05,3
+201013,0877-1,Plate6,4,S-d21-D614G,layout1.csv,0.05,3
+201013,0840-1,Plate7,1,S-d21-D614G,layout3.csv,0.05,3
+201013,GF-8,Plate7,2,S-d21-D614G,layout3.csv,0.05,3
+201013,Ty1-Fc,Plate7,3,S-d21-D614G,layout3.csv,6.778,3
+201013,2017-2018 Pool,Plate7,4,S-d21-D614G,layout3.csv,0.05,3
+201013,20/130 Ref,Plate7,5,S-d21-D614G,layout3.csv,0.025,3
