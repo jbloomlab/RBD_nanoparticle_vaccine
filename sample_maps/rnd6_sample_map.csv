@@ -1,0 +1,13 @@
+﻿DateSetUp,Sample,Plate,SampleNum,Virus,PlateLayout,StartDil,DilFactor
+201020,0854-1,Plate1,1,S-d21-D614G,layout1.csv,0.05,3
+201020,0856-1,Plate1,2,S-d21-D614G,layout1.csv,0.05,3
+201020,0805-1,Plate1,3,S-d21-D614G,layout1.csv,0.05,3
+201020,0818-1,Plate1,4,S-d21-D614G,layout1.csv,0.008333333,3
+201020,0817-1,Plate2,1,S-d21-D614G,layout1.csv,0.008333333,3
+201020,0835-1,Plate2,2,S-d21-D614G,layout1.csv,0.008333333,3
+201020,0873-1,Plate2,3,S-d21-D614G,layout1.csv,0.008333333,3
+201020,0866-1,Plate2,4,S-d21-D614G,layout1.csv,0.008333333,3
+201020,0824-1,Plate3,1,S-d21-D614G,layout1.csv,0.008333333,3
+201020,0834-1,Plate3,2,S-d21-D614G,layout1.csv,0.008333333,3
+201020,2017-2018 Serum Pool,Plate3,3,S-d21-D614G,layout1.csv,0.05,3
+201020,Ty1-Fc,Plate3,4,S-d21-D614G,layout1.csv,6.778,3
