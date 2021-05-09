@@ -4,7 +4,7 @@ This repo includes all data from the pseudotyped lentivirus neutralization assay
 
 ## Repo organization
 
-The [MouseNeuts.ipynb](https://github.com/jbloomlab/RBD_nanoparticle_vaccine/blob/organize_repo/MouseNeuts.ipynb) notebook contains analyses using [neutcurve](https://jbloomlab.github.io/neutcurve/) to calculate IC50 values for serum samples from mice immunized with RBD vaccine constructs as described in the manuscriptlinked above. 
+The [MouseNeuts.ipynb](https://github.com/jbloomlab/RBD_nanoparticle_vaccine/blob/organize_repo/MouseNeuts.ipynb) notebook contains analyses using [neutcurve](https://jbloomlab.github.io/neutcurve/) to calculate IC50 values for serum samples from mice immunized with RBD vaccine constructs as described in the manuscriptlinked above. This noteboook will typically render better on GitHub in the markdown version ([MouseNeuts.md](https://github.com/jbloomlab/RBD_nanoparticle_vaccine/blob/organize_repo/MouseNeuts.md)) 
 
 The [all_neut_results.csv](https://github.com/jbloomlab/RBD_nanoparticle_vaccine/blob/organize_repo/all_neut_results.csv) file contains IC50s and additioonal metadata for all samples run for this project, including samples that were run more than once.
 
@@ -22,6 +22,6 @@ The [mouse_plus_ctrls_neuts.csv](https://github.com/jbloomlab/RBD_nanoparticle_v
 
 * [sample_maps](https://github.com/jbloomlab/RBD_nanoparticle_vaccine/tree/organize_repo/sample_maps): Sample info needed to use `excel_to_fractinfect.py` to convert RLU data to fraction infectivities.
 
-* [PlateLayouts](https://github.com/jbloomlab/RBD_nanoparticle_vaccine/tree/organize_repo/PlateLayouts): Plate layouts for neutralization assays.
+* [PlateLayouts](https://github.com/jbloomlab/RBD_nanoparticle_vaccine/tree/organize_repo/PlateLayouts): Plate layouts for neutralization assays. Used to convert RLU data into fraction infectivity data using `excel_to_fractinfect.py`.
 
  
