@@ -18,6 +18,8 @@ from matplotlib.backends.backend_pdf import PdfPages
 from matplotlib.font_manager import FontProperties
 
 import scipy.stats
+
+from IPython.display import display, HTML
 ```
 
 
@@ -41,28 +43,13 @@ fidfs['rnd6'] = pd.read_csv('./fract_infect/201022_fractinfect_rnd6.csv').drop([
 
 ```python
 for fidf in fidfs.keys():
-    display(fidfs[fidf].head())
+    display(HTML(fidfs[fidf].head().to_html(index=False)))
 ```
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -72,7 +59,6 @@ for fidf in fidfs.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0840-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -80,7 +66,6 @@ for fidf in fidfs.keys():
       <td>0.988406</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>0840-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -88,7 +73,6 @@ for fidf in fidfs.keys():
       <td>0.999059</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>0840-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -96,7 +80,6 @@ for fidf in fidfs.keys():
       <td>1.013738</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>0840-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -104,7 +87,6 @@ for fidf in fidfs.keys():
       <td>0.909787</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0840-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -113,28 +95,12 @@ for fidf in fidfs.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -144,7 +110,6 @@ for fidf in fidfs.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0805-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -152,7 +117,6 @@ for fidf in fidfs.keys():
       <td>0.625716</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>0805-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -160,7 +124,6 @@ for fidf in fidfs.keys():
       <td>0.710727</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>0805-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -168,7 +131,6 @@ for fidf in fidfs.keys():
       <td>0.761430</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>0805-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -176,7 +138,6 @@ for fidf in fidfs.keys():
       <td>1.159994</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0805-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -185,28 +146,12 @@ for fidf in fidfs.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -216,7 +161,6 @@ for fidf in fidfs.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>GF-8</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -224,7 +168,6 @@ for fidf in fidfs.keys():
       <td>0.565430</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>GF-8</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -232,7 +175,6 @@ for fidf in fidfs.keys():
       <td>0.639826</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>GF-8</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -240,7 +182,6 @@ for fidf in fidfs.keys():
       <td>0.635820</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>GF-8</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -248,7 +189,6 @@ for fidf in fidfs.keys():
       <td>0.862117</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>GF-8</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -257,28 +197,12 @@ for fidf in fidfs.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -288,7 +212,6 @@ for fidf in fidfs.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0840-2</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -296,7 +219,6 @@ for fidf in fidfs.keys():
       <td>-0.002234</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>0840-2</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -304,7 +226,6 @@ for fidf in fidfs.keys():
       <td>-0.002000</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>0840-2</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -312,7 +233,6 @@ for fidf in fidfs.keys():
       <td>-0.000372</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>0840-2</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -320,7 +240,6 @@ for fidf in fidfs.keys():
       <td>0.021737</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0840-2</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -329,28 +248,12 @@ for fidf in fidfs.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -360,7 +263,6 @@ for fidf in fidfs.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0828-2</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -368,7 +270,6 @@ for fidf in fidfs.keys():
       <td>-0.001621</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>0828-2</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -376,7 +277,6 @@ for fidf in fidfs.keys():
       <td>-0.001460</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>0828-2</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -384,7 +284,6 @@ for fidf in fidfs.keys():
       <td>-0.001335</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>0828-2</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -392,7 +291,6 @@ for fidf in fidfs.keys():
       <td>-0.001225</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0828-2</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -401,28 +299,12 @@ for fidf in fidfs.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -432,7 +314,6 @@ for fidf in fidfs.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0824-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -440,7 +321,6 @@ for fidf in fidfs.keys():
       <td>0.000013</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>0824-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -448,7 +328,6 @@ for fidf in fidfs.keys():
       <td>0.006947</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>0824-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -456,7 +335,6 @@ for fidf in fidfs.keys():
       <td>0.030349</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>0824-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -464,7 +342,6 @@ for fidf in fidfs.keys():
       <td>0.209554</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0824-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -473,7 +350,6 @@ for fidf in fidfs.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
@@ -490,28 +366,13 @@ smpls['rnd6'] = pd.read_csv('./sample_maps/rnd6_sample_map.csv').rename(columns=
 
 ```python
 for smpl in smpls.keys():
-    display(smpls[smpl].head())
+    display(HTML(smpls[smpl].head().to_html(index=False)))
 ```
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>DateSetUp</th>
       <th>serum</th>
       <th>Plate</th>
@@ -524,7 +385,6 @@ for smpl in smpls.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>201013</td>
       <td>0793-1</td>
       <td>Plate1</td>
@@ -535,7 +395,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>201013</td>
       <td>0846-1</td>
       <td>Plate1</td>
@@ -546,7 +405,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>201013</td>
       <td>0807-1</td>
       <td>Plate1</td>
@@ -557,7 +415,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>201013</td>
       <td>0813-1</td>
       <td>Plate1</td>
@@ -568,7 +425,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>201013</td>
       <td>0863-1</td>
       <td>Plate2</td>
@@ -580,28 +436,12 @@ for smpl in smpls.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>DateSetUp</th>
       <th>serum</th>
       <th>Plate</th>
@@ -614,7 +454,6 @@ for smpl in smpls.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>201014</td>
       <td>0805-1</td>
       <td>Plate1</td>
@@ -625,7 +464,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>201014</td>
       <td>0854-1</td>
       <td>Plate1</td>
@@ -636,7 +474,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>201014</td>
       <td>0858-1</td>
       <td>Plate1</td>
@@ -647,7 +484,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>201014</td>
       <td>0817-1</td>
       <td>Plate1</td>
@@ -658,7 +494,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>201014</td>
       <td>0834-1</td>
       <td>Plate2</td>
@@ -670,28 +505,12 @@ for smpl in smpls.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>DateSetUp</th>
       <th>serum</th>
       <th>Plate</th>
@@ -704,7 +523,6 @@ for smpl in smpls.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>201015</td>
       <td>0839-2</td>
       <td>Plate1</td>
@@ -715,7 +533,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>201015</td>
       <td>0846-2</td>
       <td>Plate1</td>
@@ -726,7 +543,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>201015</td>
       <td>0852-2</td>
       <td>Plate2</td>
@@ -737,7 +553,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>201015</td>
       <td>0859-2</td>
       <td>Plate2</td>
@@ -748,7 +563,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>201015</td>
       <td>0863-2</td>
       <td>Plate3</td>
@@ -760,28 +574,12 @@ for smpl in smpls.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>DateSetUp</th>
       <th>serum</th>
       <th>Plate</th>
@@ -794,7 +592,6 @@ for smpl in smpls.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>201018</td>
       <td>0840-2</td>
       <td>Plate1</td>
@@ -805,7 +602,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>201018</td>
       <td>0850-2</td>
       <td>Plate1</td>
@@ -816,7 +612,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>201018</td>
       <td>0853-2</td>
       <td>Plate2</td>
@@ -827,7 +622,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>201018</td>
       <td>0856-2</td>
       <td>Plate2</td>
@@ -838,7 +632,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>201018</td>
       <td>0864-2</td>
       <td>Plate3</td>
@@ -850,28 +643,12 @@ for smpl in smpls.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>DateSetUp</th>
       <th>serum</th>
       <th>Plate</th>
@@ -884,7 +661,6 @@ for smpl in smpls.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>201019</td>
       <td>0795-2</td>
       <td>Plate1</td>
@@ -895,7 +671,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>201019</td>
       <td>0803-2</td>
       <td>Plate1</td>
@@ -906,7 +681,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>201019</td>
       <td>0807-2</td>
       <td>Plate2</td>
@@ -917,7 +691,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>201019</td>
       <td>0812-2</td>
       <td>Plate2</td>
@@ -928,7 +701,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>201019</td>
       <td>0818-2</td>
       <td>Plate3</td>
@@ -940,28 +712,12 @@ for smpl in smpls.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>DateSetUp</th>
       <th>serum</th>
       <th>Plate</th>
@@ -974,7 +730,6 @@ for smpl in smpls.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>201020</td>
       <td>0854-1</td>
       <td>Plate1</td>
@@ -985,7 +740,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>201020</td>
       <td>0856-1</td>
       <td>Plate1</td>
@@ -996,7 +750,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>201020</td>
       <td>0805-1</td>
       <td>Plate1</td>
@@ -1007,7 +760,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>201020</td>
       <td>0818-1</td>
       <td>Plate1</td>
@@ -1018,7 +770,6 @@ for smpl in smpls.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>201020</td>
       <td>0817-1</td>
       <td>Plate2</td>
@@ -1030,7 +781,6 @@ for smpl in smpls.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 #### Add plate number to fraction infectivity df
@@ -1045,28 +795,13 @@ for rnd in fidfs.keys():
 
 ```python
 for rnd in dfs.keys():
-    display(dfs[rnd].head())
+    display(HTML(dfs[rnd].head().to_html(index=False)))
 ```
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -1079,7 +814,6 @@ for rnd in dfs.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0840-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1090,7 +824,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>0840-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1101,7 +834,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>0840-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1112,7 +844,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>0840-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1123,7 +854,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0840-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1135,28 +865,12 @@ for rnd in dfs.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -1169,7 +883,6 @@ for rnd in dfs.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0805-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1180,7 +893,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>0805-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1191,7 +903,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>0805-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1202,7 +913,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>0805-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1213,7 +923,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0805-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1225,28 +934,12 @@ for rnd in dfs.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -1259,7 +952,6 @@ for rnd in dfs.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>GF-8</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1270,7 +962,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>GF-8</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1281,7 +972,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>GF-8</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1292,7 +982,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>GF-8</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1303,7 +992,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>GF-8</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1315,28 +1003,12 @@ for rnd in dfs.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -1349,7 +1021,6 @@ for rnd in dfs.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0840-2</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1360,7 +1031,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>0840-2</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1371,7 +1041,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>0840-2</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1382,7 +1051,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>0840-2</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1393,7 +1061,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0840-2</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1405,28 +1072,12 @@ for rnd in dfs.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -1439,7 +1090,6 @@ for rnd in dfs.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0828-2</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1450,7 +1100,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>0828-2</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1461,7 +1110,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>0828-2</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1472,7 +1120,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>0828-2</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1483,7 +1130,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0828-2</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1495,28 +1141,12 @@ for rnd in dfs.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -1529,7 +1159,6 @@ for rnd in dfs.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0824-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1540,7 +1169,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>0824-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1551,7 +1179,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>0824-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1562,7 +1189,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>0824-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1573,7 +1199,6 @@ for rnd in dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0824-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1585,7 +1210,6 @@ for rnd in dfs.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 ### Fix Plate 4 Issue for Rnd1
@@ -1596,28 +1220,13 @@ I forgot to discard the last 30 uL from the serum dilutions in row H of plate 4 
 ```python
 dfs['rnd1'].drop(dfs['rnd1'][(dfs['rnd1']['Plate']=='Plate4')&(dfs['rnd1']['concentration']==(0.05/(3**6)))].index, axis=0, inplace=True)
 dfs['rnd1'] = dfs['rnd1'].sort_values(['Plate', 'SampleNum', 'replicate'])
-display(dfs['rnd1'])
+display(HTML(dfs['rnd1'].head().to_html(index=False)))
 ```
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -1630,7 +1239,6 @@ display(dfs['rnd1'])
   </thead>
   <tbody>
     <tr>
-      <th>336</th>
       <td>0793-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1641,7 +1249,6 @@ display(dfs['rnd1'])
       <td>1</td>
     </tr>
     <tr>
-      <th>337</th>
       <td>0793-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1652,7 +1259,6 @@ display(dfs['rnd1'])
       <td>1</td>
     </tr>
     <tr>
-      <th>338</th>
       <td>0793-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1663,7 +1269,6 @@ display(dfs['rnd1'])
       <td>1</td>
     </tr>
     <tr>
-      <th>339</th>
       <td>0793-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1674,7 +1279,6 @@ display(dfs['rnd1'])
       <td>1</td>
     </tr>
     <tr>
-      <th>340</th>
       <td>0793-1</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1684,76 +1288,8 @@ display(dfs['rnd1'])
       <td>Plate1</td>
       <td>1</td>
     </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>51</th>
-      <td>20/130 Ref</td>
-      <td>S-d21-D614G</td>
-      <td>2</td>
-      <td>0.002778</td>
-      <td>0.067901</td>
-      <td>201013</td>
-      <td>Plate7</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>52</th>
-      <td>20/130 Ref</td>
-      <td>S-d21-D614G</td>
-      <td>2</td>
-      <td>0.000926</td>
-      <td>0.184104</td>
-      <td>201013</td>
-      <td>Plate7</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>53</th>
-      <td>20/130 Ref</td>
-      <td>S-d21-D614G</td>
-      <td>2</td>
-      <td>0.000309</td>
-      <td>0.379211</td>
-      <td>201013</td>
-      <td>Plate7</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>54</th>
-      <td>20/130 Ref</td>
-      <td>S-d21-D614G</td>
-      <td>2</td>
-      <td>0.000103</td>
-      <td>0.605273</td>
-      <td>201013</td>
-      <td>Plate7</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>55</th>
-      <td>20/130 Ref</td>
-      <td>S-d21-D614G</td>
-      <td>2</td>
-      <td>0.000034</td>
-      <td>0.657573</td>
-      <td>201013</td>
-      <td>Plate7</td>
-      <td>5</td>
-    </tr>
   </tbody>
 </table>
-<p>384 rows × 8 columns</p>
-</div>
 
 
 ## Calculate Fits using Neut Curve
@@ -1762,28 +1298,13 @@ For some reason must drop serum pool from rnd2.
 
 
 ```python
-display(dfs['rnd2'][dfs['rnd2']['serum'] == '2017-2018 serum pool'])
+display(HTML(dfs['rnd2'][dfs['rnd2']['serum'] == '2017-2018 serum pool'].to_html(index=False)))
 ```
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -1796,7 +1317,6 @@ display(dfs['rnd2'][dfs['rnd2']['serum'] == '2017-2018 serum pool'])
   </thead>
   <tbody>
     <tr>
-      <th>322</th>
       <td>2017-2018 serum pool</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1807,7 +1327,6 @@ display(dfs['rnd2'][dfs['rnd2']['serum'] == '2017-2018 serum pool'])
       <td>4</td>
     </tr>
     <tr>
-      <th>323</th>
       <td>2017-2018 serum pool</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1818,7 +1337,6 @@ display(dfs['rnd2'][dfs['rnd2']['serum'] == '2017-2018 serum pool'])
       <td>4</td>
     </tr>
     <tr>
-      <th>324</th>
       <td>2017-2018 serum pool</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1829,7 +1347,6 @@ display(dfs['rnd2'][dfs['rnd2']['serum'] == '2017-2018 serum pool'])
       <td>4</td>
     </tr>
     <tr>
-      <th>325</th>
       <td>2017-2018 serum pool</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1840,7 +1357,6 @@ display(dfs['rnd2'][dfs['rnd2']['serum'] == '2017-2018 serum pool'])
       <td>4</td>
     </tr>
     <tr>
-      <th>326</th>
       <td>2017-2018 serum pool</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1851,7 +1367,6 @@ display(dfs['rnd2'][dfs['rnd2']['serum'] == '2017-2018 serum pool'])
       <td>4</td>
     </tr>
     <tr>
-      <th>327</th>
       <td>2017-2018 serum pool</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1862,7 +1377,6 @@ display(dfs['rnd2'][dfs['rnd2']['serum'] == '2017-2018 serum pool'])
       <td>4</td>
     </tr>
     <tr>
-      <th>328</th>
       <td>2017-2018 serum pool</td>
       <td>S-d21-D614G</td>
       <td>1</td>
@@ -1874,7 +1388,6 @@ display(dfs['rnd2'][dfs['rnd2']['serum'] == '2017-2018 serum pool'])
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
@@ -1901,29 +1414,14 @@ for rnd in dfs.keys():
 
 ```python
 for rnd in fit_params.keys():
-    display(fit_params[rnd].head())
+    display(HTML(fit_params[rnd].head().to_html(index=False)))
 
 ```
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -1944,7 +1442,6 @@ for rnd in fit_params.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0793-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -1963,7 +1460,6 @@ for rnd in fit_params.keys():
       <td>20.000000</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>0846-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -1982,7 +1478,6 @@ for rnd in fit_params.keys():
       <td>20.000000</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>0807-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2001,7 +1496,6 @@ for rnd in fit_params.keys():
       <td>20.000000</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>0813-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2020,7 +1514,6 @@ for rnd in fit_params.keys():
       <td>20.000000</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0863-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2040,28 +1533,12 @@ for rnd in fit_params.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -2082,7 +1559,6 @@ for rnd in fit_params.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0805-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2101,7 +1577,6 @@ for rnd in fit_params.keys():
       <td>20.000000</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>0854-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2120,7 +1595,6 @@ for rnd in fit_params.keys():
       <td>20.000000</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>0858-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2139,7 +1613,6 @@ for rnd in fit_params.keys():
       <td>20.000000</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>0817-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2158,7 +1631,6 @@ for rnd in fit_params.keys():
       <td>2394.126118</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0834-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2178,28 +1650,12 @@ for rnd in fit_params.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -2220,7 +1676,6 @@ for rnd in fit_params.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>GF-8</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2239,7 +1694,6 @@ for rnd in fit_params.keys():
       <td>20.000000</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>2017-2018 Serum Pool</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2258,7 +1712,6 @@ for rnd in fit_params.keys():
       <td>20.000000</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>Ty1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2277,7 +1730,6 @@ for rnd in fit_params.keys():
       <td>1.169670</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>Ref 20/130</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2296,7 +1748,6 @@ for rnd in fit_params.keys():
       <td>435.031720</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0873-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2316,28 +1767,12 @@ for rnd in fit_params.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -2358,7 +1793,6 @@ for rnd in fit_params.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0840-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2377,7 +1811,6 @@ for rnd in fit_params.keys():
       <td>3235.667865</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>0850-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2396,7 +1829,6 @@ for rnd in fit_params.keys():
       <td>1376.363387</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>0853-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2415,7 +1847,6 @@ for rnd in fit_params.keys():
       <td>120.639716</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>0856-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2434,7 +1865,6 @@ for rnd in fit_params.keys():
       <td>87.875780</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0864-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2454,28 +1884,12 @@ for rnd in fit_params.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -2496,7 +1910,6 @@ for rnd in fit_params.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0828-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2515,7 +1928,6 @@ for rnd in fit_params.keys():
       <td>12517.348896</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>0824-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2534,7 +1946,6 @@ for rnd in fit_params.keys():
       <td>36372.975212</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>0818-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2553,7 +1964,6 @@ for rnd in fit_params.keys():
       <td>25589.832347</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>0831-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2572,7 +1982,6 @@ for rnd in fit_params.keys():
       <td>23647.284318</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0816-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2592,28 +2001,12 @@ for rnd in fit_params.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -2634,7 +2027,6 @@ for rnd in fit_params.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0824-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2653,7 +2045,6 @@ for rnd in fit_params.keys():
       <td>1897.409580</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>0834-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2672,7 +2063,6 @@ for rnd in fit_params.keys():
       <td>1239.685829</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>2017-2018 Serum Pool</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2691,7 +2081,6 @@ for rnd in fit_params.keys():
       <td>20.000000</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>Ty1-Fc</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2710,7 +2099,6 @@ for rnd in fit_params.keys():
       <td>2.964304</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0817-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2730,7 +2118,6 @@ for rnd in fit_params.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 ### Merge fit parameter data and sample data
@@ -2747,28 +2134,13 @@ for rnd in fit_params.keys():
 
 ```python
 for rnd in fits_dfs.keys():
-    display(fits_dfs[rnd].head())
+    display(HTML(fits_dfs[rnd].head().to_html(index=False)))
 ```
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -2792,7 +2164,6 @@ for rnd in fits_dfs.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0793-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2814,7 +2185,6 @@ for rnd in fits_dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>0846-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2836,7 +2206,6 @@ for rnd in fits_dfs.keys():
       <td>2</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>0807-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2858,7 +2227,6 @@ for rnd in fits_dfs.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>0813-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2880,7 +2248,6 @@ for rnd in fits_dfs.keys():
       <td>4</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0863-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2903,28 +2270,12 @@ for rnd in fits_dfs.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -2948,7 +2299,6 @@ for rnd in fits_dfs.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0805-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2970,7 +2320,6 @@ for rnd in fits_dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>0854-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -2992,7 +2341,6 @@ for rnd in fits_dfs.keys():
       <td>2</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>0858-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3014,7 +2362,6 @@ for rnd in fits_dfs.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>0817-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3036,7 +2383,6 @@ for rnd in fits_dfs.keys():
       <td>4</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0834-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3059,28 +2405,12 @@ for rnd in fits_dfs.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -3104,7 +2434,6 @@ for rnd in fits_dfs.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>GF-8</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3126,7 +2455,6 @@ for rnd in fits_dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>2017-2018 Serum Pool</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3148,7 +2476,6 @@ for rnd in fits_dfs.keys():
       <td>2</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>Ty1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3170,7 +2497,6 @@ for rnd in fits_dfs.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>Ref 20/130</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3192,7 +2518,6 @@ for rnd in fits_dfs.keys():
       <td>4</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0873-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3215,28 +2540,12 @@ for rnd in fits_dfs.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -3260,7 +2569,6 @@ for rnd in fits_dfs.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0840-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3282,7 +2590,6 @@ for rnd in fits_dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>0850-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3304,7 +2611,6 @@ for rnd in fits_dfs.keys():
       <td>2</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>0853-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3326,7 +2632,6 @@ for rnd in fits_dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>0856-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3348,7 +2653,6 @@ for rnd in fits_dfs.keys():
       <td>2</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0864-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3371,28 +2675,12 @@ for rnd in fits_dfs.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -3416,7 +2704,6 @@ for rnd in fits_dfs.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0828-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3438,7 +2725,6 @@ for rnd in fits_dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>0824-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3460,7 +2746,6 @@ for rnd in fits_dfs.keys():
       <td>2</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>0818-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3482,7 +2767,6 @@ for rnd in fits_dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>0831-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3504,7 +2788,6 @@ for rnd in fits_dfs.keys():
       <td>2</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0816-2</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3527,28 +2810,12 @@ for rnd in fits_dfs.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -3572,7 +2839,6 @@ for rnd in fits_dfs.keys():
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0824-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3594,7 +2860,6 @@ for rnd in fits_dfs.keys():
       <td>1</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>0834-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3616,7 +2881,6 @@ for rnd in fits_dfs.keys():
       <td>2</td>
     </tr>
     <tr>
-      <th>2</th>
       <td>2017-2018 Serum Pool</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3638,7 +2902,6 @@ for rnd in fits_dfs.keys():
       <td>3</td>
     </tr>
     <tr>
-      <th>3</th>
       <td>Ty1-Fc</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3660,7 +2923,6 @@ for rnd in fits_dfs.keys():
       <td>4</td>
     </tr>
     <tr>
-      <th>4</th>
       <td>0817-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3683,7 +2945,6 @@ for rnd in fits_dfs.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
 ### Find any samples with interpolated IC50s
@@ -3694,31 +2955,16 @@ Note that these samples were re-run in later rounds of neuts
 ```python
 for rnd in fits_dfs.keys():
     print(rnd)
-    display(fits_dfs[rnd][fits_dfs[rnd]['ic50_bound']=='upper'])
+    display(HTML(fits_dfs[rnd][fits_dfs[rnd]['ic50_bound']=='upper'].to_html(index=False)))
 ```
 
     rnd1
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -3742,7 +2988,6 @@ for rnd in fits_dfs.keys():
   </thead>
   <tbody>
     <tr>
-      <th>14</th>
       <td>0829-1</td>
       <td>S-d21-D614G</td>
       <td>average</td>
@@ -3765,31 +3010,15 @@ for rnd in fits_dfs.keys():
     </tr>
   </tbody>
 </table>
-</div>
 
 
     rnd2
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -3814,31 +3043,15 @@ for rnd in fits_dfs.keys():
   <tbody>
   </tbody>
 </table>
-</div>
 
 
     rnd3
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -3863,31 +3076,15 @@ for rnd in fits_dfs.keys():
   <tbody>
   </tbody>
 </table>
-</div>
 
 
     rnd4
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -3912,31 +3109,15 @@ for rnd in fits_dfs.keys():
   <tbody>
   </tbody>
 </table>
-</div>
 
 
     rnd5
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -3961,31 +3142,15 @@ for rnd in fits_dfs.keys():
   <tbody>
   </tbody>
 </table>
-</div>
 
 
     rnd6
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
       <th>serum</th>
       <th>virus</th>
       <th>replicate</th>
@@ -4010,7 +3175,6 @@ for rnd in fits_dfs.keys():
   <tbody>
   </tbody>
 </table>
-</div>
 
 
 ## Plot all neut curves
@@ -4021,6 +3185,35 @@ for rnd in fits.keys():
     fig, axes = fits[rnd].plotSera(xlabel='concentration/dilution')
 ```
 
+    /home/kdusenbu/.local/lib/python3.8/site-packages/numpy/core/_asarray.py:83: UserWarning: Warning: converting a masked element to nan.
+    /home/kdusenbu/.local/lib/python3.8/site-packages/numpy/core/_asarray.py:83: UserWarning: Warning: converting a masked element to nan.
+    /home/kdusenbu/.local/lib/python3.8/site-packages/numpy/core/_asarray.py:83: UserWarning: Warning: converting a masked element to nan.
+
+
+
+![png](MouseNeuts_files/MouseNeuts_23_1.png)
+
+
+
+![png](MouseNeuts_files/MouseNeuts_23_2.png)
+
+
+
+![png](MouseNeuts_files/MouseNeuts_23_3.png)
+
+
+
+![png](MouseNeuts_files/MouseNeuts_23_4.png)
+
+
+
+![png](MouseNeuts_files/MouseNeuts_23_5.png)
+
+
+
+![png](MouseNeuts_files/MouseNeuts_23_6.png)
+
+
 ## Plot Ty1-Fc control neut curves
 
 
@@ -4030,12 +3223,32 @@ print(f"The IC50 is {curve.ic50():.3g}")
 fig, ax = curve.plot()
 ```
 
+    The IC50 is 0.0108
+
+
+    /home/kdusenbu/.local/lib/python3.8/site-packages/numpy/core/_asarray.py:83: UserWarning: Warning: converting a masked element to nan.
+
+
+
+![png](MouseNeuts_files/MouseNeuts_25_2.png)
+
+
 
 ```python
 curve = fits['rnd2'].getCurve(serum='Ty1-FC', virus='S-d21-D614G', replicate='1')
 print(f"The IC50 is {curve.ic50():.3g}")
 fig, ax = curve.plot()
 ```
+
+    The IC50 is 0.0405
+
+
+    /home/kdusenbu/.local/lib/python3.8/site-packages/numpy/core/_asarray.py:83: UserWarning: Warning: converting a masked element to nan.
+
+
+
+![png](MouseNeuts_files/MouseNeuts_26_2.png)
+
 
 
 ```python
@@ -4044,12 +3257,26 @@ print(f"The IC50 is {curve.ic50():.3g}")
 fig, ax = curve.plot()
 ```
 
+    The IC50 is 0.0463
+
+
+
+![png](MouseNeuts_files/MouseNeuts_27_1.png)
+
+
 
 ```python
 curve = fits['rnd4'].getCurve(serum='Ty1', virus='S-d21-D614G', replicate='average')
 print(f"The IC50 is {curve.ic50():.3g}")
 fig, ax = curve.plot()
 ```
+
+    The IC50 is 0.0137
+
+
+
+![png](MouseNeuts_files/MouseNeuts_28_1.png)
+
 
 
 ```python
@@ -4058,12 +3285,26 @@ print(f"The IC50 is {curve.ic50():.3g}")
 fig, ax = curve.plot()
 ```
 
+    The IC50 is 0.0497
+
+
+
+![png](MouseNeuts_files/MouseNeuts_29_1.png)
+
+
 
 ```python
 curve = fits['rnd6'].getCurve(serum='Ty1-Fc', virus='S-d21-D614G', replicate='average')
 print(f"The IC50 is {curve.ic50():.3g}")
 fig, ax = curve.plot()
 ```
+
+    The IC50 is 0.0501
+
+
+
+![png](MouseNeuts_files/MouseNeuts_30_1.png)
+
 
 
 ```python
@@ -4072,6 +3313,13 @@ print(f"The IC50 is {1/curve.ic50():.3g}")
 fig, ax = curve.plot()
 ```
 
+    The IC50 is 5.73e+03
+
+
+
+![png](MouseNeuts_files/MouseNeuts_31_1.png)
+
+
 
 ```python
 curve = fits['rnd3'].getCurve(serum='Ref 20/130', virus='S-d21-D614G', replicate='average')
@@ -4079,12 +3327,26 @@ print(f"The IC50 is {1/curve.ic50():.3g}")
 fig, ax = curve.plot()
 ```
 
+    The IC50 is 4.02e+03
+
+
+
+![png](MouseNeuts_files/MouseNeuts_32_1.png)
+
+
 
 ```python
 curve = fits['rnd5'].getCurve(serum='Ref 20/130', virus='S-d21-D614G', replicate='average')
 print(f"The IC50 is {1/curve.ic50():.3g}")
 fig, ax = curve.plot()
 ```
+
+    The IC50 is 2.63e+03
+
+
+
+![png](MouseNeuts_files/MouseNeuts_33_1.png)
+
 
 ## Combine data into one df
 
@@ -4113,9 +3375,150 @@ for sample in rerun:
     drop_idxs.append(sample_data['DateSetUp'].idxmin()) # drop earlier run
 
 cleaned_data_df = all_data_df.drop(drop_idxs).reset_index(drop=True)
-display(cleaned_data_df.head())
+display(HTML(cleaned_data_df.head().to_html(index=False)))
 print(len(cleaned_data_df))
 ```
+
+    126
+
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>serum</th>
+      <th>virus</th>
+      <th>replicate</th>
+      <th>nreplicates</th>
+      <th>ic50</th>
+      <th>ic50_bound</th>
+      <th>ic50_str</th>
+      <th>ic90</th>
+      <th>ic90_bound</th>
+      <th>ic90_str</th>
+      <th>midpoint</th>
+      <th>slope</th>
+      <th>top</th>
+      <th>bottom</th>
+      <th>nt50</th>
+      <th>nt90</th>
+      <th>DateSetUp</th>
+      <th>Plate</th>
+      <th>SampleNum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0793-1</td>
+      <td>S-d21-D614G</td>
+      <td>average</td>
+      <td>2</td>
+      <td>0.010629</td>
+      <td>interpolated</td>
+      <td>0.0106</td>
+      <td>0.050000</td>
+      <td>lower</td>
+      <td>&gt;0.05</td>
+      <td>0.010629</td>
+      <td>0.831619</td>
+      <td>True</td>
+      <td>0.0</td>
+      <td>94.080392</td>
+      <td>20.000000</td>
+      <td>201013</td>
+      <td>Plate1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>0846-1</td>
+      <td>S-d21-D614G</td>
+      <td>average</td>
+      <td>2</td>
+      <td>0.050000</td>
+      <td>lower</td>
+      <td>&gt;0.05</td>
+      <td>0.050000</td>
+      <td>lower</td>
+      <td>&gt;0.05</td>
+      <td>4.132835</td>
+      <td>0.265601</td>
+      <td>True</td>
+      <td>0.0</td>
+      <td>20.000000</td>
+      <td>20.000000</td>
+      <td>201013</td>
+      <td>Plate1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>0807-1</td>
+      <td>S-d21-D614G</td>
+      <td>average</td>
+      <td>2</td>
+      <td>0.020702</td>
+      <td>interpolated</td>
+      <td>0.0207</td>
+      <td>0.050000</td>
+      <td>lower</td>
+      <td>&gt;0.05</td>
+      <td>0.020702</td>
+      <td>0.903648</td>
+      <td>True</td>
+      <td>0.0</td>
+      <td>48.303432</td>
+      <td>20.000000</td>
+      <td>201013</td>
+      <td>Plate1</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>0813-1</td>
+      <td>S-d21-D614G</td>
+      <td>average</td>
+      <td>2</td>
+      <td>0.050000</td>
+      <td>lower</td>
+      <td>&gt;0.05</td>
+      <td>0.050000</td>
+      <td>lower</td>
+      <td>&gt;0.05</td>
+      <td>21279.859733</td>
+      <td>0.126899</td>
+      <td>True</td>
+      <td>0.0</td>
+      <td>20.000000</td>
+      <td>20.000000</td>
+      <td>201013</td>
+      <td>Plate1</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>0863-1</td>
+      <td>S-d21-D614G</td>
+      <td>average</td>
+      <td>2</td>
+      <td>0.000207</td>
+      <td>interpolated</td>
+      <td>0.000207</td>
+      <td>0.000825</td>
+      <td>interpolated</td>
+      <td>0.000825</td>
+      <td>0.000207</td>
+      <td>1.588156</td>
+      <td>True</td>
+      <td>0.0</td>
+      <td>4834.077623</td>
+      <td>1211.892515</td>
+      <td>201013</td>
+      <td>Plate2</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+
+    113
+
 
 ### Output relevant data to csv
 
@@ -4151,8 +3554,155 @@ cleaned_data_df['Mouse'] = cleaned_data_df['serum'].apply(lambda x: x[:-2])
 
 
 ```python
-display(cleaned_data_df.sort_values('Mouse').reset_index(drop=True).head())
+display(HTML(cleaned_data_df.sort_values('Mouse').reset_index(drop=True).head().to_html(index=False)))
 ```
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>serum</th>
+      <th>virus</th>
+      <th>replicate</th>
+      <th>nreplicates</th>
+      <th>ic50</th>
+      <th>ic50_bound</th>
+      <th>ic50_str</th>
+      <th>ic90</th>
+      <th>ic90_bound</th>
+      <th>ic90_str</th>
+      <th>midpoint</th>
+      <th>slope</th>
+      <th>top</th>
+      <th>bottom</th>
+      <th>nt50</th>
+      <th>nt90</th>
+      <th>DateSetUp</th>
+      <th>Plate</th>
+      <th>SampleNum</th>
+      <th>Timepoint</th>
+      <th>Mouse</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0793-1</td>
+      <td>S-d21-D614G</td>
+      <td>average</td>
+      <td>2</td>
+      <td>0.010629</td>
+      <td>interpolated</td>
+      <td>0.0106</td>
+      <td>0.050000</td>
+      <td>lower</td>
+      <td>&gt;0.05</td>
+      <td>0.010629</td>
+      <td>0.831619</td>
+      <td>True</td>
+      <td>0.0</td>
+      <td>94.080392</td>
+      <td>20.000000</td>
+      <td>201013</td>
+      <td>Plate1</td>
+      <td>1</td>
+      <td>Prime</td>
+      <td>0793</td>
+    </tr>
+    <tr>
+      <td>0793-2</td>
+      <td>S-d21-D614G</td>
+      <td>average</td>
+      <td>2</td>
+      <td>0.000022</td>
+      <td>interpolated</td>
+      <td>2.24e-05</td>
+      <td>0.000128</td>
+      <td>interpolated</td>
+      <td>0.000128</td>
+      <td>0.000022</td>
+      <td>1.259974</td>
+      <td>True</td>
+      <td>0.0</td>
+      <td>44675.547272</td>
+      <td>7811.216903</td>
+      <td>201018</td>
+      <td>Plate5</td>
+      <td>1</td>
+      <td>Boost</td>
+      <td>0793</td>
+    </tr>
+    <tr>
+      <td>0794-2</td>
+      <td>S-d21-D614G</td>
+      <td>average</td>
+      <td>2</td>
+      <td>0.000021</td>
+      <td>interpolated</td>
+      <td>2.1e-05</td>
+      <td>0.000177</td>
+      <td>interpolated</td>
+      <td>0.000177</td>
+      <td>0.000021</td>
+      <td>1.030369</td>
+      <td>True</td>
+      <td>0.0</td>
+      <td>47596.830785</td>
+      <td>5642.361316</td>
+      <td>201019</td>
+      <td>Plate5</td>
+      <td>1</td>
+      <td>Boost</td>
+      <td>0794</td>
+    </tr>
+    <tr>
+      <td>0794-1</td>
+      <td>S-d21-D614G</td>
+      <td>average</td>
+      <td>2</td>
+      <td>0.005679</td>
+      <td>interpolated</td>
+      <td>0.00568</td>
+      <td>0.050000</td>
+      <td>lower</td>
+      <td>&gt;0.05</td>
+      <td>0.005679</td>
+      <td>0.883053</td>
+      <td>True</td>
+      <td>0.0</td>
+      <td>176.078510</td>
+      <td>20.000000</td>
+      <td>201013</td>
+      <td>Plate3</td>
+      <td>1</td>
+      <td>Prime</td>
+      <td>0794</td>
+    </tr>
+    <tr>
+      <td>0795-2</td>
+      <td>S-d21-D614G</td>
+      <td>average</td>
+      <td>2</td>
+      <td>0.000014</td>
+      <td>interpolated</td>
+      <td>1.41e-05</td>
+      <td>0.000042</td>
+      <td>interpolated</td>
+      <td>4.18e-05</td>
+      <td>0.000014</td>
+      <td>2.028635</td>
+      <td>True</td>
+      <td>0.0</td>
+      <td>70698.442042</td>
+      <td>23934.448413</td>
+      <td>201019</td>
+      <td>Plate1</td>
+      <td>1</td>
+      <td>Boost</td>
+      <td>0795</td>
+    </tr>
+  </tbody>
+</table>
+
 
 
 ```python
@@ -4173,12 +3723,165 @@ cleaned_data_df["Group"] = cleaned_data_df["Mouse"].apply(lambda x: [group for g
 
 
 ```python
-display(cleaned_data_df.head())
+display(HTML(cleaned_data_df.head().to_html(index=False)))
 ```
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>serum</th>
+      <th>virus</th>
+      <th>replicate</th>
+      <th>nreplicates</th>
+      <th>ic50</th>
+      <th>ic50_bound</th>
+      <th>ic50_str</th>
+      <th>ic90</th>
+      <th>ic90_bound</th>
+      <th>ic90_str</th>
+      <th>midpoint</th>
+      <th>slope</th>
+      <th>top</th>
+      <th>bottom</th>
+      <th>nt50</th>
+      <th>nt90</th>
+      <th>DateSetUp</th>
+      <th>Plate</th>
+      <th>SampleNum</th>
+      <th>Timepoint</th>
+      <th>Mouse</th>
+      <th>Group</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0793-1</td>
+      <td>S-d21-D614G</td>
+      <td>average</td>
+      <td>2</td>
+      <td>0.010629</td>
+      <td>interpolated</td>
+      <td>0.0106</td>
+      <td>0.050000</td>
+      <td>lower</td>
+      <td>&gt;0.05</td>
+      <td>0.010629</td>
+      <td>0.831619</td>
+      <td>True</td>
+      <td>0.0</td>
+      <td>94.080392</td>
+      <td>20.000000</td>
+      <td>201013</td>
+      <td>Plate1</td>
+      <td>1</td>
+      <td>Prime</td>
+      <td>0793</td>
+      <td>Group 1</td>
+    </tr>
+    <tr>
+      <td>0846-1</td>
+      <td>S-d21-D614G</td>
+      <td>average</td>
+      <td>2</td>
+      <td>0.050000</td>
+      <td>lower</td>
+      <td>&gt;0.05</td>
+      <td>0.050000</td>
+      <td>lower</td>
+      <td>&gt;0.05</td>
+      <td>4.132835</td>
+      <td>0.265601</td>
+      <td>True</td>
+      <td>0.0</td>
+      <td>20.000000</td>
+      <td>20.000000</td>
+      <td>201013</td>
+      <td>Plate1</td>
+      <td>2</td>
+      <td>Prime</td>
+      <td>0846</td>
+      <td>Group 2</td>
+    </tr>
+    <tr>
+      <td>0807-1</td>
+      <td>S-d21-D614G</td>
+      <td>average</td>
+      <td>2</td>
+      <td>0.020702</td>
+      <td>interpolated</td>
+      <td>0.0207</td>
+      <td>0.050000</td>
+      <td>lower</td>
+      <td>&gt;0.05</td>
+      <td>0.020702</td>
+      <td>0.903648</td>
+      <td>True</td>
+      <td>0.0</td>
+      <td>48.303432</td>
+      <td>20.000000</td>
+      <td>201013</td>
+      <td>Plate1</td>
+      <td>3</td>
+      <td>Prime</td>
+      <td>0807</td>
+      <td>Group 3</td>
+    </tr>
+    <tr>
+      <td>0813-1</td>
+      <td>S-d21-D614G</td>
+      <td>average</td>
+      <td>2</td>
+      <td>0.050000</td>
+      <td>lower</td>
+      <td>&gt;0.05</td>
+      <td>0.050000</td>
+      <td>lower</td>
+      <td>&gt;0.05</td>
+      <td>21279.859733</td>
+      <td>0.126899</td>
+      <td>True</td>
+      <td>0.0</td>
+      <td>20.000000</td>
+      <td>20.000000</td>
+      <td>201013</td>
+      <td>Plate1</td>
+      <td>4</td>
+      <td>Prime</td>
+      <td>0813</td>
+      <td>Group 4</td>
+    </tr>
+    <tr>
+      <td>0863-1</td>
+      <td>S-d21-D614G</td>
+      <td>average</td>
+      <td>2</td>
+      <td>0.000207</td>
+      <td>interpolated</td>
+      <td>0.000207</td>
+      <td>0.000825</td>
+      <td>interpolated</td>
+      <td>0.000825</td>
+      <td>0.000207</td>
+      <td>1.588156</td>
+      <td>True</td>
+      <td>0.0</td>
+      <td>4834.077623</td>
+      <td>1211.892515</td>
+      <td>201013</td>
+      <td>Plate2</td>
+      <td>1</td>
+      <td>Prime</td>
+      <td>0863</td>
+      <td>Group 5</td>
+    </tr>
+  </tbody>
+</table>
+
 
 ### Export csv of cleaned mouse neut data
 
-Only includes latest run for samples I re-ran and doesn't include human naive serum or Ty1-FC controls.
+Only includes latest run for samples I re-ran and doesn't include human serum (e.g. naive serum, ref serum or GF-8 sample) or Ty1-FC controls.
 
 
 ```python
@@ -4221,11 +3924,45 @@ ic50s_plot = (ggplot(cleaned_data_df, aes('group_order', 'nt50', color='tp_cat')
 _ = ic50s_plot.draw()
 ```
 
+
+![png](MouseNeuts_files/MouseNeuts_51_0.png)
+
+
 ### Convert to Markdown
 
 
 ```python
 !jupyter nbconvert MouseNeuts.ipynb --to markdown
+```
+
+    [NbConvertApp] Converting notebook MouseNeuts.ipynb to markdown
+    [NbConvertApp] Support files will be in MouseNeuts_files/
+    [NbConvertApp] Making directory MouseNeuts_files
+    [NbConvertApp] Making directory MouseNeuts_files
+    [NbConvertApp] Making directory MouseNeuts_files
+    [NbConvertApp] Making directory MouseNeuts_files
+    [NbConvertApp] Making directory MouseNeuts_files
+    [NbConvertApp] Making directory MouseNeuts_files
+    [NbConvertApp] Making directory MouseNeuts_files
+    [NbConvertApp] Making directory MouseNeuts_files
+    [NbConvertApp] Making directory MouseNeuts_files
+    [NbConvertApp] Making directory MouseNeuts_files
+    [NbConvertApp] Making directory MouseNeuts_files
+    [NbConvertApp] Making directory MouseNeuts_files
+    [NbConvertApp] Making directory MouseNeuts_files
+    [NbConvertApp] Making directory MouseNeuts_files
+    [NbConvertApp] Making directory MouseNeuts_files
+    [NbConvertApp] Writing 78671 bytes to MouseNeuts.md
+
+
+
+```python
+
+```
+
+
+```python
+
 ```
 
 
