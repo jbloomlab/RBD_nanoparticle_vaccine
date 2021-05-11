@@ -18,7 +18,7 @@ The [mouse_plus_ctrls_neuts.csv](https://github.com/jbloomlab/RBD_nanoparticle_v
 
 * [RLU_data](https://github.com/jbloomlab/RBD_nanoparticle_vaccine/tree/main/RLU_data): Excel files from the Bloom lab plate reader with raw luciferase data for each assay.
 
-* [fract_infect](https://github.com/jbloomlab/RBD_nanoparticle_vaccine/tree/main/fract_infect): CSV files with calculated fraction infectivity values for each assay. The `excel_to_fractinfect.py` script was used to convert the RLU data and sample maps into the fraction infectivity csv files.
+* [fract_infect](https://github.com/jbloomlab/RBD_nanoparticle_vaccine/tree/main/fract_infect): CSV files with calculated fraction infectivity values for each assay. The [excel_to_fractinfect.py](https://github.com/jbloomlab/RBD_nanoparticle_vaccine/blob/main/excel_to_fractinfect.py) script was used to convert the RLU data and sample maps into the fraction infectivity csv files.
 
 * [sample_maps](https://github.com/jbloomlab/RBD_nanoparticle_vaccine/tree/main/sample_maps): Sample info needed to use `excel_to_fractinfect.py` to convert RLU data to fraction infectivities.
 
