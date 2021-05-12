@@ -3909,23 +3909,36 @@ cleaned_data_df = cleaned_data_df.assign(timepoint_order = tp_cat)
 
 
 ```python
-ic50s_plot = (ggplot(cleaned_data_df, aes('group_order', 'nt50', color='tp_cat')) +
+xlabs = ['HexaPro-foldon', 'RBD trimer', 'Rpk4 trimer', 'Rpk9 trimer', 'RBD nanoparticle\nCHAPS buffer', 'RBD nanoparticle', 'Rpk4 nanoparticle', 'Rpk9 nanoparticle']
+
+# display(cleaned_data_df.columns)
+
+ic50s_plot = (ggplot(cleaned_data_df, aes('group_order', 'nt50', color = 'group_order')) +
               geom_boxplot(outlier_alpha=0) +
               geom_point(size=2, alpha=0.5, position=position_dodge(width=0.75)) +
-              scale_color_manual(values=CBP) +
+              scale_color_manual(values=['#000000', CBP[0], '#44AA99', '#CC6677', '#555555', '#555555', '#225555', '#882255'], guide=False) +
               theme(axis_text_x=element_text(angle=90, vjust=1, hjust=0.5),
-                    figure_size=(8, 6)) +
-#               facet_wrap('~ timepoint_order') +
+                    figure_size=(12, 4)) +
+              facet_wrap('~ timepoint_order') +
               geom_hline(yintercept=20, color='grey', linetype='dashed') +
               scale_y_continuous(trans='log10') +
-              labs(color='Timepoint')
+#               labs(color='Timepoint') +
+              scale_x_discrete(labels=xlabs) +
+              xlab('') +
+              ylab('Neutralizing Titer 50')
              )
+fig.tight_layout()
+ic50s_plot.save('./NT50_plot.pdf')
 
 _ = ic50s_plot.draw()
 ```
 
+    /home/kdusenbu/.local/lib/python3.8/site-packages/plotnine/ggplot.py:727: PlotnineWarning: Saving 12 x 4 in image.
+    /home/kdusenbu/.local/lib/python3.8/site-packages/plotnine/ggplot.py:730: PlotnineWarning: Filename: ./NT50_plot.pdf
 
-![png](MouseNeuts_files/MouseNeuts_51_0.png)
+
+
+![png](MouseNeuts_files/MouseNeuts_51_1.png)
 
 
 ### Convert to Markdown
@@ -3952,7 +3965,8 @@ _ = ic50s_plot.draw()
     [NbConvertApp] Making directory MouseNeuts_files
     [NbConvertApp] Making directory MouseNeuts_files
     [NbConvertApp] Making directory MouseNeuts_files
-    [NbConvertApp] Writing 78671 bytes to MouseNeuts.md
+    [NbConvertApp] Making directory MouseNeuts_files
+    [NbConvertApp] Writing 82962 bytes to MouseNeuts.md
 
 
 
